@@ -1,0 +1,41 @@
+.flip-div {
+  width: 30%;
+  height: 240px;
+  margin: 10px;
+  float: left;
+  text-align: center;
+}
+.flip-div .flip-front {
+  position: absolute;
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+  background-color: #ddd;
+  width: 30%;
+  height: 240px;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  -webkit-transition: transform 0.5s linear 0s;
+  transition: transform 0.5s linear 0s;
+}
+.flip-div:hover .flip-front {
+  -webkit-transform: perspective(600px) rotateY(-180deg);
+  transform: perspective(600px) rotateY(-180deg);
+}
+.flip-div .flip-back {
+  position: absolute;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  transform: perspective(600px) rotateY(180deg);
+  background-color: #777;
+  width: 30%;
+  height: 240px;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  -webkit-transition: transform 0.5s linear 0s;
+  transition: transform 0.5s linear 0s;
+}
+.flip-div:hover .flip-back {
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+}
+
+/*# sourceMappingURL=style.css.map */
